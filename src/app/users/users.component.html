@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <button
+     class="btn"
+     (click)="goToAddUserPage()"
+     >Add new user</button>
+    <div class="user-info heading">
+        <p>Name</p>
+        <p>Nickname</p>
+    </div>  
+    <div 
+    class="user-info"
+    *ngFor="let user of users"
+    (click)="onSelect(user)"
+    (click)="getUser(user)"
+    >
+        <p>{{user.name}}</p>
+        <p>{{user.nickname}}</p>
+    </div>
+</div>

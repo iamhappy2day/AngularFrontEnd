@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.user-info {
+    
+    max-width: 600px;
+    width: 100%;
+    padding: 1rem;
+    border: #b6b4b4 1px dotted;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    &:hover {
+        background: #9c84ff;
+    }
+}
+.heading {
+    p {
+        font-weight: bold;
+        color:#fff;
+    }
+    background: #9c84ff;
+}
