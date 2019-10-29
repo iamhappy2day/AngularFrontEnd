@@ -7,11 +7,12 @@
         <p>Name</p>
         <p>Nickname</p>
     </div>  
-    <div 
-    class="user-info"
-    *ngFor="let user of users"
-    (click)="onSelect(user)"
-    (click)="getUser(user)"
+    <div
+        class="user-info"
+        *ngFor="let user of users"
+        (click)="onSelect(user)"
+        (click)="getUser(user)"
+        
     >
         <p>{{user.name}}</p>
         <p>{{user.nickname}}</p>

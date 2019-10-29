@@ -1,21 +1,13 @@
-.wrapper {
-    span {
-        font-weight: 500;
-    }
-    .btn-list {
-        display: flex;
-        .btn {
-            margin-right: 10px;
+form {
+    input {
+        &.ng-invalid.ng-touched {
+            border: 1px solid red;
+        }
+        &.ng-valid.ng-touched {
+            border: 1px solid green;
         }
     }
-    form {
-        input {
-            &.ng-invalid.ng-touched {
-                border: 1px solid red;
-            }
-            &.ng-valid.ng-touched {
-                border: 1px solid green;
-            }
-        }
+    .validation {
+        color:red;
     }
 }

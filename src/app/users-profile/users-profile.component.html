@@ -1,0 +1,40 @@
+<div class="wrapper" *ngIf="this.userService.selectedUser">
+    <ul class='btn-list'>
+            <li>
+                <!--Btn back to user list page-->
+                <button
+                    class="btn"
+                    (click)='backToUsers()'
+                    type="button"
+                    >Back to user list
+                </button>
+            </li>
+            <li>
+                <!--Btn update-->
+                <button class="btn" type="button" 
+                        (click)="toggleUserForm()"> Update user</button>
+            </li>
+            <li>
+                <!--Btn delete-->
+                <button class="btn" type="button" 
+                    (click)="deleteUser()">Delete user</button>
+            </li>
+            <li>
+                <!--Btn show user with leagues-->
+                <button class="btn" type="button">Show leagues</button>
+            </li>
+            <li>
+                <!--Btn show user's races-->
+                <button class="btn"
+                        (click)="showUserRaces()">Show races</button>
+            </li>
+    </ul>
+
+    <h1>{{this.targetUser.name}} details </h1>
+
+    <div><span>id: </span>{{this.targetUser._id}}</div>
+    <div><span>name: </span>{{this.targetUser.name}}</div>
+    <div><span>nickname: </span>{{this.targetUser.nickname}}</div>
+    
+    <app-users-form *ngIf="showForm"></app-users-form>
+</div>

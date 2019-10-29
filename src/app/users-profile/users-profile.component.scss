@@ -1,0 +1,11 @@
+.wrapper {
+    span {
+        font-weight: 500;
+    }
+    .btn-list {
+        display: flex;
+        .btn {
+            margin-right: 10px;
+        }
+    }
+}

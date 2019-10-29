@@ -1,6 +1,5 @@
 import { User } from './user'; //интерфейс юзера
 
-
 export const USERS: User[] = [
         {
             "_id": "5d9e2f4d4ae1a58e0794588d",

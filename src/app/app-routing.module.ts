@@ -5,7 +5,8 @@ import { LeaguesComponent } from './leagues/leagues.component';
 import { StagesComponent } from './stages/stages.component';
 import { RacesComponent } from './races/races.component';
 import { HomeComponent } from './home/home.component';
-import { UsersFormComponent } from './users-form/users-form.component';
+import { UsersProfileComponent } from './users-profile/users-profile.component';
+import { UserAddComponent } from './user-add/user-add.component';
 
 // http://localhost:4200/ -> HomeComponent
 // http://localhost:4200/users -> UsersComponent
@@ -19,9 +20,8 @@ const routes: Routes = [
     { path: 'leagues', component: LeaguesComponent },
     { path: 'stages', component: StagesComponent },
     { path: 'races', component: RacesComponent },
-    { path: 'users/:id', component: UsersFormComponent},
-    { path: 'users/add', component: UsersFormComponent}
-
+    { path: 'users/add', component: UserAddComponent},
+    { path: 'users/:id', component: UsersProfileComponent}
 ];
 
 @NgModule({

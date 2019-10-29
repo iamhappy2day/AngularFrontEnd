@@ -10,7 +10,6 @@ import { User } from '../user';
 export class UsersComponent implements OnInit {
 
   public users: User[];
-
   public selectedUser: User;
  
   constructor(private userService: UserService) { }
@@ -21,8 +20,8 @@ export class UsersComponent implements OnInit {
 
   public onSelect(user: User): void {
     this.selectedUser = user;
-
   }
+  
   private getUser(): void {
     this.userService.getUser(this.selectedUser)
   }

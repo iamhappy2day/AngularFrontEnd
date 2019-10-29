@@ -1,60 +1,22 @@
-<div class="wrapper" *ngIf="this.userService.selectedUser">
 
-    <h1>{{this.targetUser.name}} details </h1>
+<form [formGroup]="form" (ngSubmit)='submitForm()'>
 
-    <div><span>id: </span>{{this.targetUser._id}}</div>
-    <div><span>name: </span>{{this.targetUser.name}}</div>
-    <div><span>nickname: </span>{{this.targetUser.nickname}}</div>
+    <input type="text" placeholder="Name..." class="form-control" formControlName="name">
+    <div
+        *ngIf="form.get('name').invalid && form.get('name').touched"
+        class="validation">
+        <small>Length of name must be more than 2 letters</small>
+    </div>
+    <input type="text" placeholder="Nickname..." class="form-control" formControlName="nickname">
+    <div 
+        *ngIf="form.get('nickname').invalid && form.get('nickname').touched"
+        class="validation">
+            <small>Length of nickname must be more than 2 letters</small>
+            <small> Nickname required</small>
+    </div>
+    <!--Btn submit-->
+    <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
     
-    <form [formGroup]="form" (ngSubmit)='submitForm()'>
-
-        <input type="text" placeholder="Name..." class="form-control" formControlName="name">
-        <input type="text" placeholder="Nickname..." class="form-control" formControlName="nickname">
-        <!--Btn submit-->
-        <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
-
-        <ul class='btn-list'>
-            <li>
-                <!--Btn back to user list page-->
-                <button
-                    class="btn"
-                    (click)='backToUsers()'
-                    type="button"
-                    >Back to user list
-                </button>
-            </li>
-            <li>
-                <!--Btn update-->
-                <button
-                    class="btn"
-                    type="button"
-                    >Update user
-                </button>
-            </li>
-            <li>
-                <!--Btn delete-->
-                <button 
-                    class="btn"
-                    type="button"
-                    >Delete user
-                </button>
-            </li>
-            <li>
-                <!--Btn show user with leagues-->
-                <button
-                     class="btn"
-                     type="button"
-                     >Show leagues
-                </button>
-            </li>
-            <li>
-                <!--Btn show user's races-->
-                <button
-                    class="btn"
-                    >Show races
-                </button>
-            </li>
-        </ul>
-    </form>
+</form>
     
-</div>
+
